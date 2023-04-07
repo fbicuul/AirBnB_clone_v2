@@ -1,0 +1,20 @@
+# This file lists all individuals having contributed content to the repository.
+# For how it is generated, see `hack/generate-authors.sh`.
+
+  <summary>Chincherem Onyemkpa</summary>
+    <summary>Jamiu Shomoye</summary>
+    <ul>
+    <li><a href="https://www.github.com/favyluther">Github</a></li>
+
+
+
+    </ul>
+</details>
+
+## How to add Author file
+`Bash script for generating the list of authors in git repo`
+#!/bin/sh
+
+git shortlog -se
+| perl -spe 's/^\s+\d+\s+//'
+| sed -e '/^CommitSyncScript.*$/d' \
